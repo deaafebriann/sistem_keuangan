@@ -31,7 +31,7 @@
                   <tr>
                     <th><input type="text" name="id_pengeluaran" value="{{ $data->id_pengeluaran }}"></th>
                     <th><input type="text" name="nama_pengeluaran" value="{{ $data->nama_pengeluaran }}"></th>
-                    <th><input type="text" name="tanggal_pengeluaran" value="{{ $data->tanggal_pengeluaran }}"></th>
+                    <th><input type="date" name="tanggal_pengeluaran" value="{{ $data->tanggal_pengeluaran }}"></th>
                     <th><input type="text" name="nominal_pengeluaran" value="{{ $data->nominal_pengeluaran }}"></th>
                     <td align=center>
                       <input class="btn btn-success" type="submit" value="Simpan Data">

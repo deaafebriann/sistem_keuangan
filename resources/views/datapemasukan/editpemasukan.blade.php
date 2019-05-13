@@ -31,7 +31,7 @@
                   <tr>
                     <th><input type="text" name="nis" value="{{ $data->nis }}"></th>
                     <th><input type="text" name="nama_pemasukan" value="{{ $data->nama_pemasukan }}"></th>
-                    <th><input type="text" name="tanggal_pemasukan" value="{{ $data->tanggal_pemasukan }}"></th>
+                    <th><input type="date" name="tanggal_pemasukan" value="{{ $data->tanggal_pemasukan }}"></th>
                     <th><input type="text" name="nominal_pemasukan" value="{{ $data->nominal_pemasukan }}"></th>
                     <td align=center>
                       <input class="btn btn-success" type="submit" value="Simpan Data">
