@@ -12,19 +12,22 @@
 
         <!-- Tabel Pemasukan -->
         <table class="table table-striped table-hover table-bordered">
-	        <form action="/storesiswa" method="post">
+	        <form action="/storepemasukan" method="post">
             <tr>
               @csrf
-                <th>ID</th>
+                <th>NIS</th>
                 <th>NAMA PEMASUKAN</th>
                 <th>TANGGAL</th>
                 <th>NOMINAL</th>
                 <th>OPSI</th>
                 </tr>
             <tr>
-                <th><input class="form-control" type="text" name="id_pemasukan" required="required"> <br/></th>
+                <th><select name="nis" id="" class="form-control">
+                @foreach ($siswa as $siswa)
+                <option> {{$siswa->nis}}</option>
+                @endforeach <br/></th>
                 <th><input class="form-control" type="text" name="nama_pemasukan" required="required"> <br/></th>
-                <th><input class="form-control" type="text" name="tanggal_pemasukan" required="required"> <br/></th>
+                <th><input class="form-control" type="date" name="tanggal_pemasukan" required="required"> <br/></th>
                 <th><input class="form-control" type="text" name="nominal_pemasukan" required="required"> <br/></th>
             <td>
                 <input class="btn btn-success" type="submit" value="Simpan Data">

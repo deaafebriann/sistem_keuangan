@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Siswa;
+use App\Pemasukan;
 
 class PemasukanController extends Controller
 {
@@ -15,9 +17,9 @@ class PemasukanController extends Controller
     public function index()
     {
         //
-        $readpemasukan = DB::table('pemasukan')->get();
+        $pemasukan = Pemasukan::all();
         
-	    return view('datapemasukan.readpemasukan', ['readpemasukan' => $readpemasukan]);
+	    return view('datapemasukan.readpemasukan', ['readpemasukan' => $pemasukan]);
     }
 
     /**
@@ -28,7 +30,8 @@ class PemasukanController extends Controller
     public function create()
     {
         //
-        return view('datapemasukan.addpemasukan');
+        $siswa = Siswa::all();
+        return view('datapemasukan.addpemasukan', compact('siswa'));
     }
 
     /**
@@ -41,7 +44,7 @@ class PemasukanController extends Controller
     {
         //
         DB::table('pemasukan')->insert([
-            'id_pemasukan' => $request->id_pemasukan,
+            'nis' => $request->nis,
             'nama_pemasukan' => $request->nama_pemasukan,
             'tanggal_pemasukan' => $request->tanggal_pemasukan,
             'nominal_pemasukan' => $request->nominal_pemasukan
@@ -84,7 +87,8 @@ class PemasukanController extends Controller
     public function update(Request $request)
     {
         //
-        DB::table('pemasukan')->where('id_pemasukan', $request->id_pemasukan)->update([
+        DB::table('pemasukan')->where('nis', $request->nis)->update([
+            'nis' => $request->nis,
             'nama_pemasukan' => $request->nama_pemasukan,
             'tanggal_pemasukan' => $request->tanggal_pemasukan,
             'nominal_pemasukan' => $request->nominal_pemasukan
@@ -99,7 +103,7 @@ class PemasukanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_pemasukan)
     {
         //
         DB::table('pemasukan')->where('id_pemasukan', $id_pemasukan)->delete();

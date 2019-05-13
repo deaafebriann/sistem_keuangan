@@ -20,7 +20,7 @@
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>NIS</th>
                     <th>NAMA PEMASUKAN</th>
                     <th>TANGGAL</th>
                     <th>NOMINAL</th>

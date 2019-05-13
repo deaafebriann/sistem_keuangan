@@ -26,7 +26,12 @@
                     <tr>
                             <th><input class="form-control" type="text" name="nis" required="required"> <br/></th>
                             <th><input class="form-control" type="text" name="nama_siswa" required="required"> <br/></th>
-                            <th><input class="form-control" type="text" name="jenis_kelamin" required="required"> <br/></th>
+
+                            <th><input type="radio" name="jenis_kelamin" required="required" value="L">
+                            <label for="Radio1">L</label> <br>
+                            <input type="radio" name="jenis_kelamin" required="required" value="P">
+                            <label for="Radio1">P</label>
+                            <br/></th>
                             <th><input class="form-control" type="text" name="kelas" required="required"> <br/></th>
                             <th><input class="form-control" type="text" name="jurusan" required="required"> <br/></th>
                             <td align=center>

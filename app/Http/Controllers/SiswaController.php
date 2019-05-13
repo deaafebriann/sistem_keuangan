@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Siswa;
 
 class SiswaController extends Controller
 {
@@ -15,9 +16,9 @@ class SiswaController extends Controller
     public function index()
     {
         //
-        $readsiswa = DB::table('siswa')->get();
+        $siswa = Siswa::all();
         
-	    return view('datasiswa.readsiswa', ['readsiswa' => $readsiswa]);
+	    return view('datasiswa.readsiswa', ['readsiswa' => $siswa]);
     }
 
     /**

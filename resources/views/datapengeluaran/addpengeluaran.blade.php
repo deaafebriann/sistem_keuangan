@@ -25,7 +25,7 @@
                     <tr>
                             <th><input class="form-control" type="text" name="id_pengeluaran" required="required"> <br/></th>
                             <th><input class="form-control" type="text" name="nama_pengeluaran" required="required"> <br/></th>
-                            <th><input class="form-control" type="text" name="tanggal_pengeluaran" required="required"> <br/></th>
+                            <th><input class="form-control" type="date" name="tanggal_pengeluaran" required="required"> <br/></th>
                             <th><input class="form-control" type="text" name="nominal_pengeluaran" required="required"> <br/></th>
                             <td>
                                 <input class="btn btn-success" type="submit" value="Simpan Data">

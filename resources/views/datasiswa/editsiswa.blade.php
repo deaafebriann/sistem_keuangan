@@ -32,7 +32,11 @@
                   <tr>
                     <th><input type="text" name="nis" value="{{ $data->nis }}"></th>
                     <th><input type="text" name="nama_siswa" value="{{ $data->nama_siswa }}"></th>
-                    <th><input type="text" name="jenis_kelamin" value="{{ $data->jenis_kelamin }}"></th>
+                    <th><input type="radio" name="jenis_kelamin" required="required" value="L">
+                            <label for="Radio1">L</label> <br>
+                            <input type="radio" name="jenis_kelamin" required="required" value="P">
+                            <label for="Radio1">P</label>
+                            <br/></th> </th>
                     <th><input type="text" name="kelas" value="{{ $data->kelas }}"></th>
                     <th><input type="text" name="jurusan" value="{{ $data->jurusan }}"></th>
                     <td align=center>

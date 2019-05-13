@@ -22,14 +22,14 @@
               <form action="/updatepemasukan" method="POST">
                   <tr>
                   {{csrf_field()}}
-                    <th>ID</th>
+                    <th>NIS</th>
                     <th>NAMA PEMASUKAN</th>
                     <th>TANGGAL</th>
                     <th>NOMINAL</th>
                     <th>OPSI</th>
                   </tr>
                   <tr>
-                    <th><input type="text" name="id_pemasukan" value="{{ $data->id_pemasukan }}"></th>
+                    <th><input type="text" name="nis" value="{{ $data->nis }}"></th>
                     <th><input type="text" name="nama_pemasukan" value="{{ $data->nama_pemasukan }}"></th>
                     <th><input type="text" name="tanggal_pemasukan" value="{{ $data->tanggal_pemasukan }}"></th>
                     <th><input type="text" name="nominal_pemasukan" value="{{ $data->nominal_pemasukan }}"></th>
@@ -41,7 +41,7 @@
                 @endforeach
               </table>
                       <a class="btn btn-success" href="">
-                              Kembali
+                        Kembali
                       </a>
           </div>
         </div>

@@ -44,7 +44,7 @@
                 </tbody>
               </table>
                       <a class="btn btn-success" href="{{url('/addpengeluaran')}}">
-                              Tambah Pengeluaram
+                              Tambah Pengeluaran
                       </a>
           </div>
         </div>
